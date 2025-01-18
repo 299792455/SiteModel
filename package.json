@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://299792455.github.io/ModelSite/",
+  "homepage": "https://299792455.github.io/SiteModel/",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^18.2.0",
