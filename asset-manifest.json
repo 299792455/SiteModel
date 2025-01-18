@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/SiteModel/static/css/main.3290328c.css",
+    "main.js": "/SiteModel/static/js/main.e2820f59.js",
+    "static/js/488.e75445ad.chunk.js": "/SiteModel/static/js/488.e75445ad.chunk.js",
+    "static/media/vidBanner.mp4": "/SiteModel/static/media/vidBanner.7b1b7af544b7c3353154.mp4",
+    "static/media/beat1.mp3": "/SiteModel/static/media/beat1.825340c5390bb5ac1c39.mp3",
+    "static/media/vidBeats.mp4": "/SiteModel/static/media/vidBeats.225bd05e5fc437cdc6ed.mp4",
+    "static/media/casque-de-musique.png": "/SiteModel/static/media/casque-de-musique.c46513695abb7d97c522.png",
+    "static/media/dj-skills-1.jpg": "/SiteModel/static/media/dj-skills-1.7bd591346ce745351146.jpg",
+    "static/media/playgirl.webp": "/SiteModel/static/media/playgirl.28765441a03a1fe1fdd1.webp",
+    "static/media/Nitro.webp": "/SiteModel/static/media/Nitro.75deba1c72b69d9ccc3c.webp",
+    "static/media/Sold-out.webp": "/SiteModel/static/media/Sold-out.467023ac29ed511e9dea.webp",
+    "static/media/Skin.webp": "/SiteModel/static/media/Skin.d6dfb058662158939f39.webp",
+    "index.html": "/SiteModel/index.html",
+    "main.3290328c.css.map": "/SiteModel/static/css/main.3290328c.css.map",
+    "main.e2820f59.js.map": "/SiteModel/static/js/main.e2820f59.js.map",
+    "488.e75445ad.chunk.js.map": "/SiteModel/static/js/488.e75445ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3290328c.css",
+    "static/js/main.e2820f59.js"
+  ]
+}
