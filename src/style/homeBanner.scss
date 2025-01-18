@@ -1,0 +1,177 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .banner-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  /* Superposition pour les lignes */
+  .scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Empêche les interactions */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 1px
+    );
+    background-size: 100% 4px; /* Épaisseur et espacement des lignes */
+    z-index: 0;
+  }
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1; /* Contenu au-dessus des scanlines */
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+
+.banner-content img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-top: 20px;
+}
+
+.banner-content h2 {
+  margin: 0;
+  font-size: 6rem; /* Taille par défaut */
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1;
+
+  .dj-label {
+    display: block; /* Force le saut de ligne */
+    font-weight: 700; 
+    margin-bottom: 0.2rem; 
+  }
+
+  .name-label {
+    font-size: 6rem; 
+  }
+}
+
+.banner-content p {
+  margin-top: 30px;
+  font-size: 1.5rem; /* Taille par défaut */
+  line-height: 1.5;
+}
+
+.curseur {
+  display: inline-block;
+  width: 1px; 
+  height: 1em;
+  background-color: rgb(255, 255, 255);
+  animation: clignoter 0.7s steps(1) infinite;
+  vertical-align: middle;
+  margin-left: 2px; 
+}
+
+@keyframes clignoter {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Responsive styles */
+
+@media (max-width: 900px) {
+  .banner-container {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .banner-content h2 {
+    margin: 0;
+   
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+  
+    .dj-label {
+      display: block; /* Force le saut de ligne */
+      font-weight: 700; 
+      margin-bottom: 0.2rem; 
+      font-size: 4.5rem;
+    }
+  
+    .name-label {
+      font-size: 4rem; 
+    }
+  }
+
+  .banner-content p {
+    font-size: 1.5rem; 
+  }
+}
+
+/* Point de rupture à 768px */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .banner-content h2 {
+    margin: 0;
+   
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+  
+    .dj-label {
+      display: block; /* Force le saut de ligne */
+      font-weight: 700; 
+      margin-bottom: 0.2rem; 
+      font-size: 4rem;
+    }
+  
+    .name-label {
+      font-size: 4rem; 
+    }
+  }
+
+  .banner-content p {
+    font-size: 1.5rem; 
+  }
+}
+
+/* Point de rupture à 480px */
+@media (max-width: 480px) {
+  .banner-container {
+    height: 100vh;
+    padding: 10px;
+  }
+
+  .banner-content h2 {
+    font-size: 2.5rem; /* Taille réduite pour les petits écrans */
+  }
+
+  .banner-content p {
+    font-size: 1rem; /* Plus petit texte pour les mobiles */
+  }
+}

@@ -1,0 +1,182 @@
+.about-container {
+    display: flex;
+    justify-content: center; // Place le contenu à gauche
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    //padding: 4rem; // Ajoute un espace sur les côtés pour le contenu
+    box-sizing: border-box;
+    height: 70vh;
+  }
+  
+  .about-content-dev {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; // Espace entre le titre et le contenu
+    box-sizing: content-box;
+    
+  }
+  
+  .about-title {
+    display: flex;
+    flex-direction: column; // Aligne les mots en colonne
+    align-items: flex-start; // Aligne le titre à gauche
+    text-transform: uppercase;
+    margin-top: 20px;
+
+  
+    span {
+      font-size: 6rem; // Augmente la taille du titre
+      font-weight: 700;
+      letter-spacing: 0;
+        line-height: 0.9;
+      &.dj-label {
+        background: linear-gradient(90deg, #8a2be2, #6a0dad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; // Violet pour "DJ"
+      }
+  
+      &.skill-label,
+      &.prod-label {
+        color: #ffffff; // Blanc pour "COMPOSER" et "PRODUCER"
+      }
+    }
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center; // Aligne l'image et le texte sur la même ligne
+    gap: 2rem; // Espace entre l'image et le texte
+    text-align: justify; // Justifie le texte pour une meilleure répartition
+  
+    .about-Img {
+      position: relative;
+      
+      width: 400px;
+      height: 400px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; // Rendre l'image circulaire
+        border: 5px solid rgba(255, 255, 255, 0.8); // Bordure blanche
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.6); // Lumière violette autour
+      }
+    }
+  
+    .about-text {
+      flex: 1; // Le texte prend tout l'espace disponible
+      font-size: 1.3rem; // Agrandir la taille du texte
+      line-height: 1.7; // Plus d'espacement entre les lignes
+      padding: 10px;
+      padding-left: 20px;
+      color: rgba(255, 255, 255, 0.9); // Texte blanc légèrement atténué
+    }
+  }
+  
+
+  @media (max-width: 900px) {
+    .about-content-dev {
+      align-items: center; // Centre le contenu sur les petits écrans
+    }
+  
+    .about-title {
+      align-items: center; // Centre le titre sur les petits écrans
+  
+      span {
+        font-size: 4rem; // Taille réduite pour le titre
+      }
+    }
+  
+    .about-content {
+      flex-direction: column; // Empile l'image et le texte
+      align-items: center;
+      text-align: center;
+  
+      .about-Img {
+        width: 200px;
+        height: 200px;
+  
+        img {
+          border-width: 3px; // Réduire la taille de la bordure
+        }
+      }
+  
+      .about-text {
+        text-align: justify; // Garde le texte justifié sur petits écrans
+        font-size: 1rem; // Réduit la taille du texte
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-content-dev {
+      align-items: center; // Centre le contenu sur les petits écrans
+    }
+    
+  
+    .about-title {
+      align-items: center; // Centre le titre sur les petits écrans
+  
+      span {
+        font-size: 4rem; // Taille réduite pour le titre
+      }
+    }
+  
+    .about-content {
+      flex-direction: column; // Empile l'image et le texte
+      align-items: center;
+      text-align: center;
+  
+      .about-Img {
+        width: 200px;
+        height: 200px;
+  
+        img {
+          border-width: 3px; // Réduire la taille de la bordure
+        }
+      }
+  
+      .about-text {
+        text-align: justify; // Garde le texte justifié sur petits écrans
+        font-size: 1rem; // Réduit la taille du texte
+        line-height: 1.5; // Plus d'espacement entre les lignes
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-content-dev {
+      align-items: center; // Centre le contenu sur les petits écrans
+    }
+  
+    .about-title {
+      align-items: center; // Centre le titre sur les petits écrans
+  
+      span {
+        font-size: 3rem; // Taille réduite pour le titre
+      }
+    }
+  
+    .about-content {
+      flex-direction: column; // Empile l'image et le texte
+      align-items: center;
+      text-align: center;
+  
+      .about-Img {
+        width: 200px;
+        height: 200px;
+  
+        img {
+          border-width: 3px; // Réduire la taille de la bordure
+        }
+      }
+  
+      .about-text {
+        text-align: justify; // Garde le texte justifié sur petits écrans
+        font-size: 1rem; // Réduit la taille du texte
+        
+      }
+    }
+  }
+  

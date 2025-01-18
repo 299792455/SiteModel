@@ -1,0 +1,139 @@
+.agenda-section {
+    padding: 40px 20px; /* Espace autour de la section */
+    text-align: center; /* Centre le titre et le contenu */
+  
+    .agenda-title {
+      font-size: 6rem; /* Taille du titre */
+      font-weight: bold; /* Gras pour le titre */
+      color: #fff; /* Couleur blanche */
+      margin-bottom: 30px; /* Espace entre le titre et la grille */
+    }
+  
+    .agenda-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+      gap: 20px; /* Espace entre les blocs */
+      justify-items: center; /* Centre chaque carte horizontalement */
+    }
+  
+    .event-card {
+      width: 300px;
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgb(0, 0, 0);
+      transition: transform 0.3s ease;
+      height: 700px;
+      background-color: #000;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      .event-image {
+        width: 100%;
+        height: 65%;
+        object-fit: cover; /* Affiche toute l'image sans la rognée */
+        background: #111; /* Optionnel, pour combler les zones vides */
+      }
+  
+      .event-details {
+        padding: 15px;
+        background-color: #000;
+  
+        .event-date {
+          font-size: 0.9rem;
+          color: #bbb;
+        }
+  
+        .event-name {
+          font-size: 1.2rem;
+          margin: 10px 0;
+        }
+  
+        .event-location,
+        .event-participants {
+          font-size: 0.8rem;
+          color: #ccc;
+        }
+  
+        .event-link {
+          display: block;
+          margin-top: 10px;
+          text-align: center;
+          padding: 8px 12px;
+          background: #6b1fbf;
+          border-radius: 4px;
+          color: #000;
+          text-decoration: none;
+  
+          &:hover {
+            background: #ff787d;
+          }
+        }
+      }
+    }
+  
+    /* Responsive design */
+    @media (max-width: 1200px) {
+        .agenda-container {
+          grid-template-columns: repeat(3, 1fr); /* 2 colonnes sur les écrans moyens */
+        }
+      }
+
+    @media (max-width: 900px) {
+        .agenda-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur les écrans moyens */
+          }
+    
+          .event-card {
+            width: 100%; /* La carte prend toute la largeur */
+            max-width: 100%; /* Empêche les débordements */
+            margin: 0; /* Supprime les marges pour s'aligner parfaitement */
+          }
+    
+          .agenda-title {
+            font-size: 4rem; /* Réduit la taille du titre pour petits écrans */
+            margin-bottom: 20px; /* Ajuste l'espacement sous le titre */
+            padding: 0 10px; /* Ajoute un léger padding horizontal */
+          }
+      }
+
+
+    @media (max-width: 768px) {
+      .agenda-container {
+        grid-template-columns: repeat(1, 1fr); /* 2 colonnes sur les écrans moyens */
+      }
+
+      .event-card {
+        width: 100%; /* La carte prend toute la largeur */
+        max-width: 100%; /* Empêche les débordements */
+        margin: 0; /* Supprime les marges pour s'aligner parfaitement */
+      }
+
+      .agenda-title {
+        font-size: 4rem; /* Réduit la taille du titre pour petits écrans */
+        margin-bottom: 20px; /* Ajuste l'espacement sous le titre */
+        padding: 0 10px; /* Ajoute un léger padding horizontal */
+      }
+    }
+  
+    @media (max-width: 480px) {
+        .agenda-container {
+          grid-template-columns: 1fr; /* 1 seule colonne */
+        }
+      
+        .event-card {
+          width: 100%; /* La carte prend toute la largeur */
+          max-width: 100%; /* Empêche les débordements */
+          margin: 0; /* Supprime les marges pour s'aligner parfaitement */
+        }
+      
+        .agenda-title {
+          font-size: 3rem; /* Réduit la taille du titre pour petits écrans */
+          margin-bottom: 30px; /* Ajuste l'espacement sous le titre */
+          padding: 0 10px; /* Ajoute un léger padding horizontal */
+        }
+      }
+  }
+  

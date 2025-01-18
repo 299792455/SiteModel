@@ -1,0 +1,171 @@
+header {
+  display: flex;
+  justify-content: space-between; // Sépare le logo et les liens
+  align-items: center; // Centre verticalement le contenu
+  padding: 10px 30px; // Ajuste les marges internes
+  width: 100%; // Prend toute la largeur de l'écran
+  //max-width: 1440px; // Limite à 1440px sur les grands écrans
+  margin: 0 auto; // Centre le header sur les grands écrans
+  background-color: #00000000;
+  
+  position:absolute; // Fixe le header en haut de la page
+  z-index: 1000; // Assure que le header passe au-dessus des autres éléments
+  box-sizing: border-box;
+
+  .logo {
+    position: relative;
+    display: inline-block;
+  
+    img {
+      height: 100px;
+      width: 100px;
+      
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; // Suivre le contour circulaire du logo
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 50%, 
+        rgba(255, 255, 255, 0.8) 60%, // Violet avec transparence
+        rgba(0, 0, 0, 0) 70%
+      ); // Faisceau lumineux violet
+      background-size: 200% 200%; // Taille pour permettre l'animation fluide
+      z-index: 0; // Place derrière l'image
+      
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4); // Lumière diffuse violette
+    }
+  
+    @keyframes singleRay {
+      100% {
+        background-position: -200% 0%; // Mouvement du faisceau
+      }
+    }
+  }
+  
+  
+  
+  
+  
+
+  .burger-menu {
+    display: none; // Caché sur les grands écrans
+    width: 40px; // Largeur du menu burger
+    height: 30px; // Hauteur totale du menu burger
+    position: relative; // Nécessaire pour positionner les lignes
+    cursor: pointer;
+    padding:5px ;
+  
+    span {
+      display: block;
+      width: 100%; // S'aligne à la largeur du menu burger
+      height: 4px; // Épaisseur des lignes
+      background-color: white; // Couleur des lignes
+      margin-bottom: 6px; // Espacement entre les lignes
+      border-radius: 2px; // Coins arrondis pour un look propre
+      transition: transform 0.3s ease, opacity 0.3s ease; // Animation des transitions
+    }
+  
+    // Styles pour l'état ouvert
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg); // Ligne supérieure en croix
+      }
+  
+      span:nth-child(2) {
+        opacity: 0; // Ligne centrale cachée
+      }
+  
+      span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg); // Ligne inférieure en croix
+      }
+    }
+  }
+  
+  nav {
+    ul {
+      display: flex; // Met les liens sur une ligne
+      list-style: none; // Supprime les puces
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: 20px; // Espacement entre les liens
+
+        a {
+          color: rgb(255, 255, 255); // Couleur du texte
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 20px;
+
+          &:hover {
+            color: pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles pour les mobiles */
+@media (max-width: 768px) {
+  header {
+    justify-content: flex-end; // Aligne le menu burger à droite
+    padding: 10px 20px;
+    background-color: #00000000;
+
+    .logo {
+      display: none; // Cache le logo sur mobile
+    }
+
+    .burger-menu {
+      display: block; // Affiche le menu burger
+      margin-right: 30px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: #000000;
+    }
+  }
+
+  nav {
+    display: none; // Masque le menu par défaut
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 60px; // Place le menu sous le header
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+
+    &.open {
+      display: flex; // Affiche le menu lorsque la classe "open" est active
+    }
+
+    ul {
+      flex-direction: column; // Empile les liens en colonne
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 10px 0; // Espacement entre les liens
+
+        a {
+          display: block; // Chaque lien occupe une ligne entière
+          text-align: left; // Alignement à gauche
+          width: 100%; // Occupe toute la largeur disponible
+          padding: 10px; // Agrandit la zone cliquable
+        }
+      }
+    }
+  }
+}

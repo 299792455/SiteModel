@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.max-width-container {
+  max-width: 1440px; /* Limite la largeur à 1024px */
+  margin: 0 auto; /* Centre le contenu horizontalement */
+  padding: 0 20px; /* Espace sur les côtés pour les petits écrans */
+}
+
+.video-container {
+  position: relative;
+  width: 100%; /* Vidéo prend toute la largeur */
+  height: 30vh; /* Respecte la hauteur naturelle de la vidéo */
+  overflow: hidden; /* Empêche les débordements */
+}
+
+.background-video {
+  width: 100vw; /* La vidéo s'étend sur toute la largeur de l'écran */
+  height: auto; /* Préserve les proportions */
+  object-fit: cover; /* S'assure que la vidéo remplit le conteneur */
+  display: block;
+}
+
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Couvre toute la largeur de la vidéo */
+  height: 100%; /* Couvre toute la hauteur de la vidéo */
+  pointer-events: none; /* Empêche les interactions */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px
+  ); /* Crée les lignes horizontales */
+  background-size: 100% 4px; /* Espacement entre les lignes */
+  z-index: 1; /* Positionne les scanlines au-dessus de la vidéo */
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
